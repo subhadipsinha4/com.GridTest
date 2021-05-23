@@ -13,7 +13,7 @@ public class openBrowser {
         driver= new ChromeDriver();
         driver.manage().window().maximize();
         driver.get( "https://www.miniaturemarket.com/" );
-        System.out.println(driver.getTitle());
-        driver.close();
+        System.out.println("Page title: "+driver.getTitle());
+
     }
 }
