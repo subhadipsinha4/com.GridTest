@@ -130,17 +130,40 @@
 
     <build>
 
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <fork>true</fork>
-                    <executable>C:\Program Files\Java\jdk1.7.0_45\bin\javac.exe</executable>
-                </configuration>
-            </plugin>
+       
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-compiler-plugin</artifactId>-->
+<!--                <version>3.8.1</version>-->
+<!--                <configuration>-->
+<!--                    <fork>true</fork>-->
+<!--                    <executable>C:\Program Files\Java\jdk1.7.0_45\bin\javac.exe</executable>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
 
+
+
+                <!-- To define the plugin version in your parent POM -->
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-compiler-plugin</artifactId>
+                            <version>3.8.1</version>
+                        </plugin>
+                        ...
+                    </plugins>
+                </pluginManagement>
+                <!-- To use the plugin goals in your POM or parent POM -->
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>3.8.1</version>
+                    </plugin>
+<!--                    ...-->
+<!--                </plugins>-->
+<!--           -->
 
 <!--            <plugin>-->
 <!--            <groupId>org.apache.maven.plugins</groupId>-->
